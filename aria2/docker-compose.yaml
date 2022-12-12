@@ -1,0 +1,15 @@
+version: '3'
+services:
+  aria2:
+    container_name: aria2
+    image: xujinkai/aria2-with-webui
+      #environment:
+      #SECRET: admin
+    ports:
+      - 6800:6800
+      - 6880:80
+      - 6888:8080
+    volumes:
+      - ./data:/conf
+      - /mnt/downloading/aria2:/data
+
