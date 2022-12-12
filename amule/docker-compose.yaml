@@ -1,0 +1,18 @@
+version: '2.1'
+services:
+  amule:
+    container_name: amule
+    image: tchabaud/amule
+    environment:
+      - PUID=0
+      - PGID=0
+      - WEBUI_PWD=admin
+    volumes:
+      - ./data:/home/amule/.aMule
+      - /mnt/downloading/amule:/home/amule/download
+    ports:
+      - 4711:4711
+      - 4662:4662
+      - 4672:4672/udp
+    restart: unless-stopped
+
