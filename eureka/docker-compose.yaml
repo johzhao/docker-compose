@@ -7,4 +7,5 @@ services:
       - ./data:/tmp
     ports:
       - "8761:8761"
+    restart: unless-stopped
 
