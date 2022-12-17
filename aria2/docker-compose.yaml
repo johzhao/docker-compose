@@ -12,4 +12,5 @@ services:
     volumes:
       - ./data:/conf
       - /mnt/downloading/aria2:/data
+    restart: unless-stopped
 
