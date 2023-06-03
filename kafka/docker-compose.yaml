@@ -18,10 +18,10 @@ services:
     ports:
       - "9092:9092"
     environment:
-      - KAFKA_BROKER_ID=0
-      - KAFKA_ADVERTISED_HOST_NAME=192.168.0.100  # need change to host IP
-      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://192.168.0.100:9092 # need change to host IP
+      KAFKA_BROKER_ID: 0
+      KAFKA_ADVERTISED_HOST_NAME: 192.168.0.100  # need change to host IP
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://192.168.0.100:9092 # need change to host IP
     volumes:
       - ./data/kafka/kafka:/kafka
       - ./data/kafka/config:/opt/kafka/config
